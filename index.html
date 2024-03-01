@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 15</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="main-container" id="main-container">
+      <!-- Section-1  -->
+      <section class="section-1">
+        <div class="child-section-1">
+          <h4 class="heading-h4">Display Color</h4>
+          <button type="button" class="random-btn" id="random-btn">
+            Random Color
+          </button>
+        </div>
+        <div class="divider" id="color-display"></div>
+        <!-- <div class="color-display" id="color-display"></div> -->
+      </section>
+      <!-- section 2 -->
+      <div class="section-2">
+        <div class="child-section-2">
+          <div class="heading-h4">Change & Copy Color</div>
+          <div class="">
+            <button
+              type="button"
+              class="copy-to-clipboard-btn"
+              id="save-to-clipboard"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              class="copy-to-clipboard-btn"
+              id="copy-to-clipboard"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="child-section-3">
+          <p>Select Copy Mode</p>
+          <div class="color-parent">
+            <div class="hex">
+              <input
+                type="radio"
+                name="color-mode"
+                value="hex"
+                id="radioBtn"
+                checked
+              />
+              <label for="radio">HEX</label>
+            </div>
+            <div class="rgb">
+              <input
+                type="radio"
+                name="color-mode"
+                value="rgb"
+                id="radioBtn1"
+              />
+              <label for="radio">RGB</label>
+            </div>
+          </div>
+        </div>
+        <div class="child-section-4">
+          <div class="hex-rgb-parent">
+            <div class="input-parent">
+              <p>HEX</p>
+              <span>#</span>
+              <input
+                type="text"
+                name="text"
+                id="input-1"
+                value="DDDEEE"
+                placeholder="Input Hex Color"
+              />
+            </div>
+            <div class="input-parent">
+              <p id="select-rgb">RGB</p>
+              <input
+                type="text"
+                name="text"
+                id="input-2"
+                value="rgb(255, 255, 255)"
+                disabled
+                placeholder="Input RGB Color"
+              />
+            </div>
+          </div>
+          <div class="adjust-rbg">
+            <p>Adjusts RGB Colors</p>
+            <div class="rgb-range">
+              <div class="input-title">
+                <div class="">
+                  <label for="range">Red</label>
+                  <input
+                    type="range"
+                    name="range"
+                    id="rgb-range-red"
+                    min="0"
+                    max="255"
+                  />
+                </div>
+                <p id="title-1">255</p>
+              </div>
+
+              <div class="input-title">
+                <div class="">
+                  <label for="range">Green</label>
+                  <input
+                    type="range"
+                    name="range"
+                    id="rgb-range-green"
+                    min="0"
+                    max="255"
+                  />
+                </div>
+                <p id="title-2">255</p>
+              </div>
+
+              <div class="input-title">
+                <div class="">
+                  <label for="range">Blue</label>
+                  <input
+                    type="range"
+                    name="range"
+                    id="rgb-range-blue"
+                    min="0"
+                    max="255"
+                  />
+                </div>
+                <p id="title-3">255</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section  PreSet Color-->
+      <section class="section-last-container">
+        <div class="section-header">
+          <h3 class="section-title">Preset Colors</h3>
+        </div>
+        <div class="divider"></div>
+        <div class="preset-colors" id="preset-colors"></div>
+      </section>
+      <!-- section  Custom Color-->
+      <section class="section-last-container">
+        <div class="section-header">
+          <h3 class="section-title">Custom Colors</h3>
+        </div>
+        <div class="divider"></div>
+        <div class="preset-colors" id="custom-colors"></div>
+      </section>
+      <!-- section background preview Images-->
+      <section class="section-last-container">
+        <div class="section-header">
+          <h3 class="section-title">Background Preferences</h3>
+        </div>
+        <div class="section-body">
+          <div class="section-body-title">
+            <h3 class="title">Background Preview</h3>
+            <div class="background-preview-image" id="background-img"></div>
+          </div>
+          <!-- background size area  -->
+          <div class="background-size-parent" id="background-size-parent">
+            <!-- select-group-1  -->
+            <div class="select-group">
+              <label for="bg-size">Background Size</label>
+              <select name="bg-size" id="bg-size" class="input-text">
+                <option value="auto">Auto</option>
+                <option value="inherit">Inherit</option>
+                <option value="contain">Contain</option>
+                <option value="cover">Cover</option>
+              </select>
+            </div>
+            <!-- select-group-2  -->
+            <div class="select-group">
+              <label for="bg-repeat">Background Repeat</label>
+              <select name="bg-repeat" id="bg-repeat" class="input-text">
+                <option value="repeat">Repeat</option>
+                <option value="no-repeat">No Repeat</option>
+              </select>
+            </div>
+            <!-- select-group-3  -->
+            <div class="select-group">
+              <label for="bg-position">Background Position</label>
+              <select name="bg-position" id="bg-position" class="input-text">
+                <option value="left top">Left Top</option>
+                <option value="left center">Left Center</option>
+                <option value="left bottom">Left Bottom</option>
+                <option value="right top">Right Top</option>
+                <option value="right center">Right Center</option>
+                <option value="right bottom">Right Bottom</option>
+                <option value="center top">Center Top</option>
+                <option value="center center">Center Center</option>
+                <option value="center bottom">Center Bottom</option>
+              </select>
+            </div>
+            <!-- select-group-4  -->
+            <div class="select-group">
+              <label for="bg-attachment">Background Attachment</label>
+              <select
+                name="bg-attachment"
+                id="bg-attachment"
+                class="input-text"
+              >
+                <option value="auto">Auto</option>
+                <option value="inherit">Inherit</option>
+                <option value="local">Local</option>
+                <option value="fixed">Fixed</option>
+                <option value="scroll">Scroll</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="input-section">
+          <input
+            type="file"
+            name="file"
+            id="input-file"
+            class="input-file"
+            accept="image/*"
+          />
+          <button type="button" class="upload-file-btn" id="remove-file-btn">
+            Remove
+          </button>
+          <button type="button" class="upload-file-btn" id="upload-file-btn">
+            Upload
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
